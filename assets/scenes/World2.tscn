@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/sprites/tileset forest.png" type="Texture" id=1]
 [ext_resource path="res://assets/scenes/Player.tscn" type="PackedScene" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://assets/sprites/coinCropped.png" type="Texture" id=11]
 [ext_resource path="res://assets/scripts/ui.gd" type="Script" id=12]
 [ext_resource path="res://assets/scripts/Deathzone.gd" type="Script" id=13]
-[ext_resource path="res://assets/sprites/spikes.png" type="Texture" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -25,9 +24,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=12]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
@@ -385,27 +381,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 18/shape_one_way_margin = 0.0
 18/shapes = [  ]
 18/z_index = 0
-19/name = "tileset forest.png 19"
-19/texture = ExtResource( 1 )
-19/tex_offset = Vector2( 0, 0 )
-19/modulate = Color( 1, 1, 1, 1 )
-19/region = Rect2( 96, 64, 16, 16 )
-19/tile_mode = 0
-19/occluder_offset = Vector2( 0, 0 )
-19/navigation_offset = Vector2( 0, 0 )
-19/shape_offset = Vector2( 0, 0 )
-19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-19/shape = SubResource( 17 )
-19/shape_one_way = false
-19/shape_one_way_margin = 1.0
-19/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 17 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-19/z_index = 0
 
 [sub_resource type="Theme" id=14]
 
@@ -419,81 +394,7 @@ corner_radius_bottom_left = 15
 [sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 233, 31 )
 
-[sub_resource type="ConvexPolygonShape2D" id=18]
-points = PoolVector2Array( 4.82007, 3.00813, 6.98359, 8.95779, 8.44396, 9.06597, 11.0402, 2.62952, 11.9597, 2.62952, 15.7999, 12.2572, 15.7999, 14.1142, 0.168516, 14.2224, 0, 12.149, 4.33328, 3.11631, 4.33328, 3.11631 )
-
-[sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 4.94827, 10.0576, 7.05769, 13.8978, 8.95077, 13.8978, 10.952, 10.1117, 11.9256, 10.1658, 13.9268, 13.0324, 14.1432, 14.2224, 1.703, 14.1683, 1.75708, 13.8978, 4.08286, 10.1658 )
-
-[sub_resource type="ConvexPolygonShape2D" id=20]
-points = PoolVector2Array( 4.88417, 6.10919, 7.37221, 12.3293, 8.23762, 12.2752, 10.942, 6.00101, 11.8615, 6.16328, 15.1068, 14.1142, 15.1068, 14.1142, 15.1609, 14.4928, 0.935755, 14.601, 0.881666, 14.2224, 4.12694, 6.10919 )
-
-[sub_resource type="TileSet" id=19]
-0/name = "spikes.png 0"
-0/texture = ExtResource( 14 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 16, 16 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 18 )
-0/shape_one_way = false
-0/shape_one_way_margin = 1.0
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 18 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-0/z_index = 0
-1/name = "spikes.png 1"
-1/texture = ExtResource( 14 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 32, 0, 16, 16 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 21 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 21 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-1/z_index = 0
-2/name = "spikes.png 2"
-2/texture = ExtResource( 14 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 16, 0, 16, 16 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 20 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 20 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-2/z_index = 0
-
-[node name="World1" type="Node2D"]
+[node name="World2" type="Node2D"]
 
 [node name="Sky" type="Sprite" parent="."]
 position = Vector2( 136, -55 )
@@ -518,7 +419,7 @@ position = Vector2( 2, 0 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -262139, 14, 0, -262130, 17, 0, -131070, 5, 0, -131069, 3, 0, -131068, 1, 0, -131059, 14, 0, -65530, 16, 0, 65544, 2, 0, 65545, 0, 0, 65546, 3, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 1, 0, 131073, 2, 0, 131074, 0, 0, 131075, 1, 0, 131080, 4, 0, 131081, 12, 0, 131082, 9, 0, 131083, 10, 0, 131084, 12, 0, 131085, 10, 0, 131086, 11, 0, 196613, 16, 0, 196616, 6, 0, 196617, 8, 0, 196618, 8, 0, 196619, 8, 0, 196620, 8, 0, 196621, 8, 0, 196622, 19, 0 )
+tile_data = PoolIntArray( -262139, 14, 0, -262130, 17, 0, -196606, 13, 0, -131059, 14, 0, 2, 16, 0, 8, 2, 0, 9, 0, 0, 10, 3, 0, 11, 0, 0, 12, 1, 0, 65540, 16, 0, 65544, 4, 0, 65545, 9, 0, 65546, 12, 0, 65547, 10, 0, 65548, 11, 0, 131078, 16, 0, 131080, 4, 0, 131081, 12, 0, 131082, 12, 0, 131083, 12, 0, 131084, 11, 0, 196610, 2, 0, 196611, 3, 0, 196612, 0, 0, 196613, 1, 0, 196616, 4, 0, 196617, 12, 0, 196618, 12, 0, 196619, 12, 0, 196620, 11, 0, 262146, 4, 0, 262147, 12, 0, 262148, 12, 0, 262149, 11, 0, 262152, 4, 0, 262153, 12, 0, 262154, 12, 0, 262155, 12, 0, 262156, 11, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 137, 0 )
@@ -526,18 +427,17 @@ current = true
 zoom = Vector2( 0.25, 0.25 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 219, -1 )
+position = Vector2( 133, -16 )
 
 [node name="Sign" type="Sprite" parent="."]
-position = Vector2( 29, 16 )
+position = Vector2( 190, -16 )
 texture = ExtResource( 9 )
-flip_h = true
-
-[node name="Coin2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 69, -41 )
 
 [node name="Coin" parent="." instance=ExtResource( 10 )]
-position = Vector2( 90, 40 )
+position = Vector2( 74, 8 )
+
+[node name="Coin" parent="Coin" instance=ExtResource( 10 )]
+position = Vector2( -32, -16 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enable = true
@@ -569,21 +469,11 @@ text = "00"
 valign = 1
 max_lines_visible = 1
 
-[node name="DeathZoneArea2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
 script = ExtResource( 13 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZoneArea2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 146, 89 )
 shape = SubResource( 16 )
 
-[node name="Spikes" type="Area2D" parent="."]
-
-[node name="TileMap" type="TileMap" parent="Spikes"]
-tile_set = SubResource( 19 )
-cell_size = Vector2( 16, 16 )
-collision_use_parent = true
-format = 1
-tile_data = PoolIntArray( 11, 2, 0 )
-
-[connection signal="body_entered" from="DeathZoneArea2D" to="DeathZoneArea2D" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Spikes" to="Player" method="_on_Spikes_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

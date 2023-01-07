@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/scripts/Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/background2.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/water_8frames.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/background1.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Menu" type="Control"]
+margin_right = 1025.0
+margin_bottom = 598.0
+script = ExtResource( 1 )
+
+[node name="Water8Frames2" type="Sprite" parent="."]
+position = Vector2( -1143, -663.474 )
+scale = Vector2( 3.99219, 12.25 )
+texture = ExtResource( 3 )
+offset = Vector2( 414.059, 58.3244 )
+
+[node name="Background2" type="Sprite" parent="Water8Frames2"]
+position = Vector2( 414.059, 69.9162 )
+scale = Vector2( 1.00783, 0.363202 )
+texture = ExtResource( 2 )
+
+[node name="Background1" type="Sprite" parent="Water8Frames2/Background2"]
+position = Vector2( 0, 25.173 )
+texture = ExtResource( 4 )
+
+[node name="Water8Frames" type="Sprite" parent="Water8Frames2/Background2"]
+position = Vector2( -409.6, -2.02282 )
+scale = Vector2( 0.992233, 1.25856 )
+texture = ExtResource( 3 )
+offset = Vector2( 414.059, 58.3244 )
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -114.5
+margin_top = -22.0
+margin_right = 114.5
+margin_bottom = 22.0
+
+[node name="Buttons" type="VBoxContainer" parent="MainContainer"]
+margin_right = 229.0
+margin_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartGame" type="Button" parent="MainContainer/Buttons"]
+margin_right = 229.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 75, 0 )
+custom_styles/normal = SubResource( 1 )
+text = "Start game"
+
+[node name="Quit" type="Button" parent="MainContainer/Buttons"]
+margin_top = 26.0
+margin_right = 229.0
+margin_bottom = 47.0
+rect_min_size = Vector2( 0, 14 )
+rect_pivot_offset = Vector2( 75, 0 )
+custom_styles/normal = SubResource( 1 )
+text = "Quit"
+
+[connection signal="pressed" from="MainContainer/Buttons/StartGame" to="." method="_on_StartGame_pressed"]
+[connection signal="pressed" from="MainContainer/Buttons/Quit" to="." method="_on_StartGame_pressed"]
+[connection signal="pressed" from="MainContainer/Buttons/Quit" to="." method="_on_Quit_pressed"]

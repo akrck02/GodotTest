@@ -45,3 +45,15 @@ func _physics_process(delta):
 			motion.x = lerp(motion.x,0,0.01)
 			
 	motion = move_and_slide(motion,up);
+
+func addCoin():
+	print("New coin collected!");
+	var canvasLayer = get_tree().get_root().find_node("CanvasLayer", true, false);
+	canvasLayer.handleCoinCollected();
+		
+
+
+func _on_Spikes_body_entered(body):
+	print("Player has died");
+	get_tree().reload_current_scene();
+		

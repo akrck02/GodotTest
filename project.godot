@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Godot Test"
-run/main_scene="res://assets/scenes/PlayerScene.tscn"
+run/main_scene="res://assets/scenes/Menu.tscn"
 config/icon="res://icon.png"
+
+[gui]
+
+theme/use_hidpi=true
 
 [physics]
 
